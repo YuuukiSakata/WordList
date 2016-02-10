@@ -10,6 +10,14 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var querstionLabel: UILabel!
+    @IBOutlet var answerLabel: UILabel!
+    
+    var isAnswered: Bool = false //回答したか・次の問題に行くかの判定
+    
+    var wordArray: [AnyObject] = [] //ユーザーデフォルトからとる配列
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
