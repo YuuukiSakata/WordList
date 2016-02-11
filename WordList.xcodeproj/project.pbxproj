@@ -24,6 +24,8 @@
 		06FBAE1E1C6B81390037BCCC /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FBAE1D1C6B81390037BCCC /* FinishViewController.swift */; };
 		06FBAE201C6B816C0037BCCC /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FBAE1F1C6B816C0037BCCC /* ListTableViewController.swift */; };
 		06FBAE221C6B81930037BCCC /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FBAE211C6B81930037BCCC /* AddViewController.swift */; };
+		06FBAE251C6C17A60037BCCC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FBAE231C6C17A60037BCCC /* ListTableViewCell.swift */; };
+		06FBAE261C6C17A60037BCCC /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06FBAE241C6C17A60037BCCC /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		06FBAE1D1C6B81390037BCCC /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		06FBAE1F1C6B816C0037BCCC /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		06FBAE211C6B81930037BCCC /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		06FBAE231C6C17A60037BCCC /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		06FBAE241C6C17A60037BCCC /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				06FBAE1D1C6B81390037BCCC /* FinishViewController.swift */,
 				06FBAE1F1C6B816C0037BCCC /* ListTableViewController.swift */,
 				06FBAE211C6B81930037BCCC /* AddViewController.swift */,
+				06FBAE231C6C17A60037BCCC /* ListTableViewCell.swift */,
+				06FBAE241C6C17A60037BCCC /* ListTableViewCell.xib */,
 			);
 			path = WordList;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 				06FBADE51C6B3D130037BCCC /* Main.storyboard in Resources */,
 				06FBAE161C6B3D990037BCCC /* Default-667h@2x.png in Resources */,
 				06FBAE171C6B3D990037BCCC /* Default-736h@3x.png in Resources */,
+				06FBAE261C6C17A60037BCCC /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06FBAE251C6C17A60037BCCC /* ListTableViewCell.swift in Sources */,
 				06FBADE21C6B3D130037BCCC /* ViewController.swift in Sources */,
 				06FBAE1E1C6B81390037BCCC /* FinishViewController.swift in Sources */,
 				06FBAE221C6B81930037BCCC /* AddViewController.swift in Sources */,
@@ -538,6 +546,7 @@
 				06FBAE061C6B3D130037BCCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06FBAE071C6B3D130037BCCC /* Build configuration list for PBXNativeTarget "WordListTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +555,7 @@
 				06FBAE091C6B3D130037BCCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06FBAE0A1C6B3D130037BCCC /* Build configuration list for PBXNativeTarget "WordListUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +564,7 @@
 				06FBAE0C1C6B3D130037BCCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

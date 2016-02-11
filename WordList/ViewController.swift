@@ -35,13 +35,13 @@ class ViewController: UIViewController {
         }
         
         let alert: UIAlertController = UIAlertController(
-            title: "単語"
+            title: "単語",
             message:  "まずは「単語一覧」をタップして単語登録してください",
             preferredStyle: .Alert
         )
         
         alert.addAction(UIAlertAction(
-            title: "OK"
+            title: "OK",
             style: .Default,
             handler: nil
             )

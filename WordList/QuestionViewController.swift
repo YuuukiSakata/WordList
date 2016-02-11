@@ -11,19 +11,70 @@ import UIKit
 class QuestionViewController: UIViewController {
 
     @IBOutlet var nextButton: UIButton!
-    @IBOutlet var querstionLabel: UILabel!
+    @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
     
     var isAnswered: Bool = false //回答したか・次の問題に行くかの判定
-    
     var wordArray: [AnyObject] = [] //ユーザーデフォルトからとる配列
+    var shuffledWordArray: [AnyObject] = [] //シャッフルされた配列
+    var nowNumber: Int = 0 //現在の回答数
+    
+    let saveData = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        answerLabel.text = ""
         // Do any additional setup after loading the view.
     }
 
+    //viewが現れた時に呼ばれる
+    override func viewWillAppear(animated: Bool) {
+        wordArray = saveData.arrayForKey("WORD")!
+        //問題をシャッフルする
+        shuffle()
+        questionLabel.text = shuffledWordArray[nowNumber]["english"] as? String
+    }
+    
+    @IBAction func nextButtonPushed() {
+        
+        //回答したか
+        if isAnswered {
+            //次の問題へ
+            nowNumber++
+            answerLabel.text = ""
+            
+            //次の問題を表示するか
+            if nowNumber < shuffledWordArray.count {
+                //次の問題を表示
+                questionLabel.text = shuffledWordArray[nowNumber]["english"] as? String
+                //isAnsweredをfalseにする
+                isAnswered = false
+                //ボタンのタイトルを変更する
+                nextButton.setTitle("答えを表示", forState: UIControlState.Normal)
+            }else{
+                //これ以上表示する問題はないので、Finishレビューに画面遷移
+                self.performSegueWithIdentifier("toFinishView", sender: nil)
+            }
+            
+        }else{
+            //答えを表示する
+            answerLabel.text = shuffledWordArray[nowNumber]["japanese"] as? String
+            //isAnsweredをtreeにする
+            isAnswered = true
+            //ボタンのタイトルを変更する
+            nextButton.setTitle("次へ", forState: UIControlState.Normal)
+        }
+    }
+    
+    
+    func shuffle() {
+        while wordArray.count > 0 {
+            let index = Int(rand()) % wordArray.count
+            shuffledWordArray.append(wordArray[index])
+            wordArray.removeAtIndex(index)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
